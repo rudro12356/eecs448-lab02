@@ -45,7 +45,7 @@ bool LinkedList<T>::search(T value) const
 		Fix this method
 	*/
 
-	return(isFound);
+	return(true);
 }
 
 template <typename T>
