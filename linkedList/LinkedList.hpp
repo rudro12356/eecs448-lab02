@@ -60,6 +60,8 @@ bool LinkedList<T>::search(T value) const
 			temp = temp->getNext();	
 		}
 	}
+
+	return false;
 }
 
 template <typename T>
@@ -126,22 +128,31 @@ bool LinkedList<T>::removeBack()
 		return false;
 	}
 
+	if(m_size==1)
+	{
+		delete lastNode;
+		m_front = nullptr;
+		m_size--;
+		return true;
+	}
+
 	else 
 	{
-		for (int i=1; i<= m_size; i++)
+		for (int i=1; i<= m_size-1; i++)
 		{
 			secondintoLast = lastNode;
 			lastNode = lastNode->getNext();
 			
 		}
 
-		secondintoLast = nullptr;
+		secondintoLast->setNext(nullptr) ;
 		delete lastNode;
 		m_size--;
 		
 		return true;		
 
 	}
+	return false;
 
 }
 
