@@ -56,12 +56,10 @@ bool LinkedList<T>::search(T value) const
 			if ( temp->getValue() == value)
 				{
 					return true;
-				}	
+				}
+			temp = temp->getNext();	
 		}
 	}
-	
-	
-	return false;
 }
 
 template <typename T>
@@ -141,7 +139,7 @@ bool LinkedList<T>::removeBack()
 		delete lastNode;
 		m_size--;
 		
-		return(true);		
+		return true;		
 
 	}
 
