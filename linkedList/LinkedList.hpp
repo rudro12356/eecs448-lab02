@@ -107,7 +107,7 @@ bool LinkedList<T>::removeBack()
 		Fix this method
 	*/
 
-	return(true);
+	return(isRemoved);
 }
 
 template <typename T>
