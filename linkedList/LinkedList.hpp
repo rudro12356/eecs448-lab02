@@ -53,7 +53,7 @@ bool LinkedList<T>::search(T value) const
 	{
 		for ( int i =1; i<= m_size;i++)
 		{
-			if ( temp->m_value == value)
+			if ( temp->getValue() == value)
 				{
 					return true;
 				}	
