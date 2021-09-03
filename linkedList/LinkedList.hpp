@@ -122,8 +122,29 @@ bool LinkedList<T>::removeBack()
 	/** TODO
 		Fix this method
 	*/
+	lastNode = m_front;
+	if ( m_size == 0)
+	{
+		return false;
+	}
 
-	return(true);
+	else 
+	{
+		for (int i=1; i<= m_size; i++)
+		{
+			secondintolast = lastNode;
+			lastNode = lastNode->getNext();
+			
+		}
+
+		secondintoLast = nullptr;
+		delete lastNode;
+		m_size--;
+		
+		return(true);		
+
+	}
+
 }
 
 template <typename T>
