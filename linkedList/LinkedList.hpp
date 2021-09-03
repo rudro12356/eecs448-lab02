@@ -46,7 +46,7 @@ bool LinkedList<T>::search(T value) const
 	*/
 	if (m_front == NULL)
 	{
-		cout<<"Empty list"<<endl;
+		cout<<"Empty list"<<std::endl;
 		return false;
 	}
 	else
