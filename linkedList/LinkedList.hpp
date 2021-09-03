@@ -44,8 +44,24 @@ bool LinkedList<T>::search(T value) const
 	/** TODO
 		Fix this method
 	*/
-
-	return(true);
+	if (m_front == NULL)
+	{
+		cout<<"Empty list"<<endl;
+		return false;
+	}
+	else
+	{
+		for ( int i =1; i<= m_size;i++)
+		{
+			if ( temp->m_value == value)
+				{
+					return true;
+				}	
+		}
+	}
+	
+	
+	return false;
 }
 
 template <typename T>
@@ -107,7 +123,7 @@ bool LinkedList<T>::removeBack()
 		Fix this method
 	*/
 
-	return(isRemoved);
+	return(true);
 }
 
 template <typename T>
